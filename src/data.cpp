@@ -26,7 +26,8 @@ void Data::generate_data() {
         if (m_generator == "random")
         {
             m_double = new double[m_length];
-            std::uniform_real_distribution<double> dist(defaults::RANDOM_DOUBLE_BEGIN, defaults::RANDOM_DOUBLE_END);
+            std::uniform_real_distribution<double> dist(std::numeric_limits<double>::min(),
+                                                        std::numeric_limits<double>::max());
             for (unsigned long i=0; i < m_length; ++i) { m_double[i] = dist(m_mt); }
         }
 
@@ -51,7 +52,7 @@ void Data::generate_data() {
         if (m_generator == "random")
         {
             m_int = new int[m_length];
-            std::uniform_int_distribution<int> dist(defaults::RANDOM_INT_BEGIN, defaults::RANDOM_INT_END);
+            std::uniform_int_distribution<int> dist(std::numeric_limits<int>::min(), std::numeric_limits<int>::max());
             for (unsigned long i=0; i < m_length; ++i) { m_int[i] = dist(m_mt); }
         }
 
@@ -76,7 +77,7 @@ void Data::generate_data() {
         if (m_generator == "random")
         {
             m_long = new long[m_length];
-            std::uniform_int_distribution<long> dist(defaults::RANDOM_LONG_BEGIN, defaults::RANDOM_LONG_END);
+            std::uniform_int_distribution<long> dist(std::numeric_limits<long>::min(), std::numeric_limits<int>::max());
             for (unsigned long i=0; i < m_length; ++i) { m_long[i] = dist(m_mt); }
         }
 
