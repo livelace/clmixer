@@ -11,7 +11,7 @@ libraries {
         policy = "clmixer"
     }
     k8s_build {
-        image = "harbor-core.k8s-2.livelace.ru/dev/gobuild:latest"
+        image = "harbor-core.k8s-2.livelace.ru/dev/clmixer:latest"
         privileged = true
     }
     kaniko {
