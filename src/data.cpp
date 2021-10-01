@@ -26,7 +26,7 @@ void Data::generate_data() {
         if (m_generator == "random")
         {
             m_double = new double[m_length];
-            std::uniform_real_distribution<double > dist(defaults::RANDOM_DOUBLE_BEGIN, defaults::RANDOM_DOUBLE_END);
+            std::uniform_real_distribution<double> dist(defaults::RANDOM_DOUBLE_BEGIN, defaults::RANDOM_DOUBLE_END);
             for (unsigned long i=0; i < m_length; ++i) { m_double[i] = dist(m_mt); }
         }
 
