@@ -18,8 +18,6 @@ std::string human_readable(std::uintmax_t size)
 
     mantissa = std::ceil(mantissa * 10.) / 10.;
 
-    std::cout << mantissa << std::endl;
-
     return fmt::format("{}{}", mantissa, "BKMGTPE"[i]);
 }
 
