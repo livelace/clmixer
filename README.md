@@ -32,7 +32,28 @@
 ### Quick start:
 
 ```shell script
-
+user@localhost ~ $ cd /tmp
+user@localhost /tmp $ git clone https://github.com/livelace/clmixer.git
+user@localhost /tmp $ curl -L https://github.com/livelace/clmixer/releases/download/v1.1.0/clmixer-v1.1.0.appimage -o clmixer.appimage && chmod +x clmixer.appimage
+user@localhost /tmp $ ./clmixer.appimage --opencl-kernel-file clmixer/examples/opencl/buffer_copy_long.c
+[2021-10-02 00:23:42.746] [info] clmixer v1.0.0
+[2021-10-02 00:23:42.911] [info] device: #0 (Intel(R) Core(TM) i7-7700T CPU @ 2.90GHz, 2900MHz, 31.1G, 7.8G)
+[2021-10-02 00:23:42.911] [info] task mode: opencl
+[2021-10-02 00:23:42.911] [info] opencl mode: buffer
+[2021-10-02 00:23:42.911] [info] generate increment data: started
+[2021-10-02 00:23:43.388] [info] generate increment data: finished (long, 134217728, 1G)
+[2021-10-02 00:23:43.388] [info] task [1][1]: creation ...
+[2021-10-02 00:23:43.497] [info] task [1][1]: creation: kernel compiled
+[2021-10-02 00:23:43.762] [info] task [1][1]: creation: input buffer written
+[2021-10-02 00:23:43.762] [info] task [1][1]: creation: finished
+[2021-10-02 00:23:43.763] [info] task [1][1]: execution ...
+[2021-10-02 00:23:44.233] [info] task [1][1]: execution: compute fulfilled
+[2021-10-02 00:23:44.503] [info] task [1][1]: execution: output buffer read
+[2021-10-02 00:23:44.503] [info] task [1][1]: execution: finished
+[2021-10-02 00:23:44.503] [info] task [1]: cleanup
+[2021-10-02 00:23:44.793] [info] data: cleanup
+[2021-10-02 00:23:44.793] [info] result show [1]: [0 ... 134217727]
+[2021-10-02 00:23:44.877] [info] exiting
 ```
 
 ### ToDo:
