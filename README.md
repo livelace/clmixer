@@ -32,6 +32,7 @@
 ### Quick start:
 
 ```shell script
+# command line.
 user@localhost ~ $ cd /tmp
 user@localhost /tmp $ git clone https://github.com/livelace/clmixer.git
 user@localhost /tmp $ curl -L https://github.com/livelace/clmixer/releases/download/v1.1.0/clmixer-v1.1.0.appimage -o clmixer.appimage && chmod +x clmixer.appimage
@@ -54,6 +55,24 @@ user@localhost /tmp $ ./clmixer.appimage --opencl-kernel-file clmixer/examples/o
 [2021-10-02 00:23:44.793] [info] data: cleanup
 [2021-10-02 00:23:44.793] [info] result show [1]: [0 ... 134217727]
 [2021-10-02 00:23:44.877] [info] exiting
+
+# docker.
+user@localhost /tmp $ docker run -ti ghcr.io/livelace/clmixer:latest clmixer --sd
+[2021-10-01 21:26:01.852] [info] available devices:
+
+cpu:
+  device: #0
+    name:                      Intel(R) Core(TM) i7-7700T CPU @ 2.90GHz
+    platform:                  Intel(R) OpenCL
+    clock speed:               2900MHz
+    memory global size:        31.1G
+    memory max allocate:       7.8G
+    svm coarse-grained buffer: false
+    svm fine-grained buffer:   false
+    svm fine-grained system:   false
+    work group dimension:      3
+    work group size:           8192
+
 ```
 
 ### ToDo:
