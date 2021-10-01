@@ -57,7 +57,7 @@ user@localhost /tmp $ ./clmixer.appimage --opencl-kernel-file clmixer/examples/o
 [2021-10-02 00:23:44.877] [info] exiting
 
 # docker.
-user@localhost /tmp $ docker run -ti ghcr.io/livelace/clmixer:latest clmixer --sd
+user@localhost /tmp $ docker run -ti ghcr.io/livelace/clmixer:v1.1.0 clmixer --sd
 [2021-10-01 21:26:01.852] [info] available devices:
 
 cpu:
