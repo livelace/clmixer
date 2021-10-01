@@ -1,7 +1,7 @@
 libraries {
     appimage {
         source = "clmixer"
-        destination = 'clmixer-${VERSION}.appimage'
+        destination = "clmixer.appimage"
     }
     cmake
     git {
@@ -19,9 +19,9 @@ libraries {
     }
     mattermost
     nexus {
-        source = 'clmixer-${VERSION}.appimage'
-        destination = 'dists-internal/clmixer/clmixer-${VERSION}.appimage'
+        source = "clmixer.appimage"
+        destination = "dists-internal/clmixer/clmixer.appimage"
     }
     sonarqube
-    version
+
 }
