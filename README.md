@@ -37,7 +37,7 @@ user@localhost ~ $ cd /tmp
 user@localhost /tmp $ git clone https://github.com/livelace/clmixer.git
 user@localhost /tmp $ curl -L https://github.com/livelace/clmixer/releases/download/v1.1.0/clmixer-v1.1.0.appimage -o clmixer.appimage && chmod +x clmixer.appimage
 user@localhost /tmp $ ./clmixer.appimage --opencl-kernel-file clmixer/examples/opencl/buffer_copy_long.c
-[2021-10-02 00:23:42.746] [info] clmixer v1.0.0
+[2021-10-02 00:23:42.746] [info] clmixer v1.1.0
 [2021-10-02 00:23:42.911] [info] device: #0 (Intel(R) Core(TM) i7-7700T CPU @ 2.90GHz, 2900MHz, 31.1G, 7.8G)
 [2021-10-02 00:23:42.911] [info] task mode: opencl
 [2021-10-02 00:23:42.911] [info] opencl mode: buffer
