@@ -22,6 +22,7 @@
 * C++17 compatible compiler.
 * OpenCL ICD Loader ([first](https://github.com/KhronosGroup/OpenCL-ICD-Loader) or [second](https://github.com/OCL-dev/ocl-icd)).
 * [spdlog](https://github.com/gabime/spdlog) library (v7/8 should be fine).
+* [CLI11](https://github.com/CLIUtils/CLI11) library.
 
 ### AppImage dependencies:
 
