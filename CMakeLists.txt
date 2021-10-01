@@ -3,8 +3,6 @@ project(clmixer)
 
 set(CMAKE_CXX_STANDARD 17)
 
-find_library(FMT fmt)
-find_package(nlohmann_json REQUIRED)
 find_package(spdlog REQUIRED)
 find_package(Threads REQUIRED)
 find_package(OpenCL REQUIRED)
