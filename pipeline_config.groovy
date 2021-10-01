@@ -1,7 +1,7 @@
 libraries {
     appimage {
         source = "clmixer"
-        destination = "clmixer.appimage"
+        destination = "clmixer-v1.1.0.appimage"
     }
     cmake
     git {
@@ -15,12 +15,12 @@ libraries {
         privileged = true
     }
     kaniko {
-        destination = "data/clmixer:latest"
+        destination = "data/clmixer:v1.1.0"
     }
     mattermost
     nexus {
-        source = "clmixer.appimage"
-        destination = "dists-internal/clmixer/clmixer.appimage"
+        source = "clmixer-v1.1.0.appimage"
+        destination = "dists-internal/clmixer/clmixer-v1.1.0.appimage"
     }
     sonarqube
 
