@@ -1,26 +1,31 @@
+def APP_NAME = "clmixer"
+def APP_REPO = "https://github.com/livelace/clmixer.git"
+def APP_VERSION = env.VERSION + '-${GIT_COMMIT_SHORT}'
+
 libraries {
     appimage {
-        source = "clmixer"
-        destination = "clmixer-v1.1.0.appimage"
+        source = "${APP_NAME}"
+        destination = "${APP_NAME}-${APP_VERSION}.appimage"
     }
     cmake
     git {
-        repo_url = "https://github.com/livelace/clmixer.git"
+        repo_url = "${APP_REPO}"
+        repo_branch = env.VERSION
     }
     harbor_replicate {
-        policy = "clmixer"
+        policy = "${APP_NAME}"
     }
     k8s_build {
-        image = "harbor-core.k8s-2.livelace.ru/dev/clmixer:latest"
+        image = "harbor-core.k8s-2.livelace.ru/dev/clmixer:${env.VERSION}"
         privileged = true
     }
     kaniko {
-        destination = "data/clmixer:v1.1.0"
+        destination = "data/${APP_NAME}:${env.VERSION}"
     }
     mattermost
     nexus {
-        source = "clmixer-v1.1.0.appimage"
-        destination = "dists-internal/clmixer/clmixer-v1.1.0.appimage"
+        source = "${APP_NAME}-${APP_VERSION}.appimage"
+        destination = "dists-internal/${APP_NAME}/${APP_NAME}-${APP_VERSION}.appimage"
     }
     sonarqube
 
