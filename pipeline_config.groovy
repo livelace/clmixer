@@ -22,6 +22,7 @@ libraries {
     }
     kaniko {
         destination = "data/${APP_NAME}:${IMAGE_TAG}"
+        options = "--build-arg=IMAGE_TAG=${IMAGE_TAG}"
     }
     mattermost
     nexus {
