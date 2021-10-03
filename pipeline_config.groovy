@@ -1,6 +1,7 @@
 def APP_NAME = "clmixer"
 def APP_REPO = "https://github.com/livelace/clmixer.git"
 def APP_VERSION = env.VERSION + '-${GIT_COMMIT_SHORT}'
+def IMAGE_TAG = env.VERSION == "master" ? "latest" : env.VERSION
 
 libraries {
     appimage {
@@ -16,11 +17,11 @@ libraries {
         policy = "${APP_NAME}"
     }
     k8s_build {
-        image = "harbor-core.k8s-2.livelace.ru/dev/clmixer:${env.VERSION}"
+        image = "harbor-core.k8s-2.livelace.ru/dev/clmixer:${IMAGE_TAG}"
         privileged = true
     }
     kaniko {
-        destination = "data/${APP_NAME}:${env.VERSION}"
+        destination = "data/${APP_NAME}:${IMAGE_TAG}"
     }
     mattermost
     nexus {
