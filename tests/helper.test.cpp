@@ -8,5 +8,4 @@
 TEST(HelperTestSuite, HumanSize)
 {
     EXPECT_EQ(human_readable(1024),"1K");
-    EXPECT_EQ(human_readable(10240),"1K");
 }
