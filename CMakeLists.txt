@@ -27,5 +27,6 @@ target_link_libraries(clmixer_test
         spdlog::spdlog
         ${GTEST_LDFLAGS})
 
+include(CTest)
 include(GoogleTest)
 gtest_discover_tests(clmixer_test XML_OUTPUT_DIR ".")
