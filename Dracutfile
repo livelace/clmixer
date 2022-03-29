@@ -13,4 +13,8 @@ depends() {
 install() {
     # binaries.
     inst "$WORK_DIR/clmixer" "/usr/local/bin/clmixer"
+
+    # intel.
+    inst "/etc/OpenCL/vendors/intel64.icd"
+    inst "/usr/lib/OpenCL/vendors/intel/*"
 }
