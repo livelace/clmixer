@@ -6,7 +6,7 @@ check() {
 }
 
 depends() {
-    echo "base"
+    echo "base debug"
     return 0
 }
 
@@ -17,4 +17,5 @@ install() {
     # intel.
     inst "/etc/OpenCL/vendors/intel64.icd"
     inst "/usr/lib/OpenCL/vendors/intel/*"
+    inst "/opt/intel/opencl-1.2-4.4.0.117/lib64/*"
 }
