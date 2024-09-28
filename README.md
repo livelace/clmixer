@@ -82,8 +82,3 @@ cpu:
 2. Summary execution statistics.
 3. OpenCL images and pipes.
 4. CUDA support.
-
-### Credits:
-<br>
-
-[![main](assets/jetbrains.png)](https://www.jetbrains.com/ides/)
